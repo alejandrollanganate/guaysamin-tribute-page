@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Bellota&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
+:root {
+    --color-fondo-pagina-completa: white;
+    --color-cabecera-titulo: linear-gradient(30deg, #04595D, #0A3056, #363C41);
+    --color-main: white;
+    --color-item-date: #04595D;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-pagina-completa);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--color-main);
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+.header {
+    background: var(--color-cabecera-titulo);
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+h1 {
+    margin: 0%;
+    font-family: 'Bellota', arial;
+    color: white;
+}
+
+#img-div {
+    animation-name: aparecerImagen;
+    animation-duration: 4s;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding-top: 4.8%;
+    justify-items: center;
+}
+
+#img-div>figcaption {
+    padding: 1% 0 1% 0;
+    color: #0A3056;
+    font-size: 15px;
+}
+
+img {
+    max-width: 60%;
+    z-index: 2;
+}
+
+@keyframes aparecerImagen {
+    0% {
+        opacity: 0%;
+        transform: translateY(-250px);
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.año {
+    background-color: var(--color-item-date);
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.suceso {
+    padding-left: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+#tribute-info {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+hr {
+    height: 0.1em;
+    background-color: orange;
+    border: none;
+}
+
+q {
+    font-size: 1.7em;
+}
+
+.cita {
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.4%;
+}
+
+#autor {
+    color: #D18A06;
+}
+
+@media (max-width: 1000px) {
+    img {
+        max-width: 90%;
+        z-index: 2;
+    }
+    #tribute-info {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+.media {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2%;
+}
+
+.link {
+    text-align: center;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+a {
+    padding: 1%;
+    background-color: #0A3056;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    background-color: crimson;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+}
